@@ -1,0 +1,96 @@
+@import 'variables';
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    // Variables
+    --font-rubik: 'Rubik', sans-serif;
+    --background: #000;
+
+    $primary: #e0ff00;
+    $primary-invert: findColorInvert($primary);
+    $dark: findDarkColor($primary);
+    $light: #e0ff00;
+    $link: $primary-invert;
+
+    // Adding custom Broge colors
+    // From Maurice
+    // Highlight
+    $light: #5c83ff;
+    // Body
+    $blue: #3156f4;
+    $blue-invert: findColorInvert($blue);
+    // Shadow
+    $shadow-color: #0e2daf;
+    // Outline
+    $border: #172960;
+    // Dark Fill
+    $dark: #000;
+    // V Red
+    $red: #e00052;
+    $red-invert: findColorInvert($red);
+    // V Pink
+    $pink: #ee27fe;
+    $pink-invert: findColorInvert($pink);
+    // V Orange
+    $orange: #ff7800;
+    $orange-invert: findColorInvert($orange);
+    // V Yellow
+    $yellow: #e0ff00;
+    $yellow-invert: findColorInvert($yellow);
+    // Assigning custom colors to their associated variables
+    $custom-colors: (
+      'blue': (
+        $blue,
+        $blue-invert
+      ),
+      'red': (
+        $red,
+        $red-invert
+      ),
+      'pink': (
+        $pink,
+        $pink-invert
+      ),
+      'orange': (
+        $orange,
+        $orange-invert
+      ),
+      'yellow': (
+        $yellow,
+        $yellow-invert
+      )
+    );
+
+    $custom-colors: (
+      'orange': (
+        $orange,
+        $orange-invert
+      )
+    );
+
+    // settings background color
+    $background: $dark;
+  }
+
+  html {
+    max-height: 100vh; /* Maximum height is 100% of the viewport height */
+    overflow-y: auto; /* Allow scrolling if content exceeds the maximum height */
+  }
+
+  body {
+    color: $yellow;
+    font-family: monospace;
+    font-weight: bold;
+    min-height: 100vh; /* Set the minimum height of the body to 100% of the viewport height */
+    display: flex;
+    flex-direction: column;
+  }
+
+  #app {
+    flex-grow: 1; /* Allow the app container to grow and fill the available space */
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    max-height: calc(100vh - 175px);
+  }
+}

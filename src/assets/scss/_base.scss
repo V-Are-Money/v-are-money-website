@@ -1,0 +1,36 @@
+@import 'variables';
+
+.has-text-yellow {
+  color: $yellow !important;
+}
+
+.link-hover {
+  transition: color 0.3s ease;
+}
+
+.link-hover:hover,
+.copy-icon:hover {
+  color: darken($yellow, 20%) !important; /* Darker color on hover */
+}
+
+h1,
+h2,
+.rubik-glitch-regular {
+  font-family: 'Rubik Glitch', system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+p,
+.space-mono-bold {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+disclaimer,
+.space-mono-regular {
+  font-family: 'Space Mono', monospace;
+  font-weight: 400;
+  font-style: normal;
+}

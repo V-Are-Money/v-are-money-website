@@ -3,7 +3,9 @@
     <div class="container">
       <div class="columns is-centered">
         <div class="column is-full-width has-text-centered mb-6 mt-6">
-          <div class="title rubik-glitch-regular">v are money</div>
+          <div class="title rubik-glitch-regular has-text-yellow" style="font-size: 6rem">
+            v are money
+          </div>
           <div class="is-size-2 has-text-yellow">
             Stand with us, be the spark,<br />
             In this revolution’s arc,<br />
@@ -22,18 +24,20 @@
     />
     <div class="container">
       <div class="columns is-centered">
-        <div class="column is-full-width has-text-centered mb-3 mt-6 is-size-2 space-mono-bold">
+        <div
+          class="column is-full-width has-text-centered mb-3 mt-6 is-size-2 space-mono-bold has-text-yellow"
+        >
           CA:
           <a
-            href="https://basescan.org/token/0xfca463ffce3e9528253a545a3358bba848cabc48"
+            href="https://basescan.org/token/0xA2b9436D567A740357ca432b35582E93191e6a2F"
             target="_blank"
             class="has-text-yellow link-hover"
           >
-            0xfca463ffce3e9528253a545a3358bba848cabc48
+            0xA2b9436D567A740357ca432b35582E93191e6a2F
           </a>
           <font-awesome-icon
             :icon="['fas', 'copy']"
-            class="copy-icon link-hover"
+            class="copy-icon link-hover has-text-yellow"
             :class="{ active: isActive }"
             @click="copyToClipboard"
             @mouseover="isHovered = true"
@@ -57,7 +61,7 @@ const isHovered = ref(false)
 const isActive = ref(false)
 
 const copyToClipboard = () => {
-  const textToCopy = '0xfca463ffce3e9528253a545a3358bba848cabc48'
+  const textToCopy = '0xA2b9436D567A740357ca432b35582E93191e6a2F'
   navigator.clipboard.writeText(textToCopy).then(() => {
     showTooltip.value = true
     isActive.value = true

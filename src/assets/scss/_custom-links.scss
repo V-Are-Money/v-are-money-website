@@ -1,0 +1,27 @@
+// src/assets/scss/_custom-links.scss
+@import 'variables';
+
+a {
+  color: $yellow; // Custom color for links
+  text-decoration: underline; // Add underline
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: darken($yellow, 20%); // Darker color on hover
+  }
+}
+
+a,
+.navbar-link {
+  color: $yellow !important; // Custom color for links
+  text-decoration: underline; // Add underline
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: darken($yellow, 20%) !important; // Darker color on hover
+  }
+
+  .fa-icon {
+    color: $yellow !important; // Ensure FontAwesome icons are also yellow
+  }
+}
