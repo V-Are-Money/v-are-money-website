@@ -31,7 +31,7 @@
           <a
             href="https://basescan.org/token/0xA2b9436D567A740357ca432b35582E93191e6a2F"
             target="_blank"
-            class="has-text-yellow link-hover"
+            class="has-text-yellow link-hover address-wrap"
           >
             0xA2b9436D567A740357ca432b35582E93191e6a2F
           </a>
@@ -97,5 +97,17 @@ const copyToClipboard = () => {
 
 .tooltip.fade-out {
   opacity: 0;
+}
+
+.address-wrap {
+  word-wrap: break-word; /* Allows breaking long words onto the next line */
+  word-break: break-all; /* Forces breaks in long words if necessary */
+  white-space: normal; /* Normal white-space behavior */
+}
+
+@media (max-width: 768px) {
+  .address-wrap {
+    font-size: 1rem; /* Adjust font size if necessary */
+  }
 }
 </style>
