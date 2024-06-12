@@ -25,9 +25,9 @@
     <div class="container">
       <div class="columns is-centered">
         <div
-          class="column is-full-width has-text-centered mb-3 mt-6 is-size-2 space-mono-bold has-text-yellow"
+          class="column is-full-width has-text-centered mb-3 mt-6 is-size-2 space-mono-bold has-text-yellow ca-container"
         >
-          CA:
+          <span class="ca-text">CA:</span>
           <a
             href="https://basescan.org/token/0xA2b9436D567A740357ca432b35582E93191e6a2F"
             target="_blank"
@@ -103,11 +103,34 @@ const copyToClipboard = () => {
   word-wrap: break-word; /* Allows breaking long words onto the next line */
   word-break: break-all; /* Forces breaks in long words if necessary */
   white-space: normal; /* Normal white-space behavior */
+  display: inline-block; /* Ensure the element can shrink */
+  max-width: 90%; /* Ensure it does not overflow its container */
+}
+
+.ca-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 90%; /* Ensure container does not overflow */
+  overflow-wrap: anywhere; /* Ensure the address can break anywhere */
+}
+
+.ca-text {
+  margin-right: 10px;
 }
 
 @media (max-width: 768px) {
   .address-wrap {
     font-size: 1rem; /* Adjust font size if necessary */
+  }
+  .ca-container {
+    flex-direction: column;
+  }
+  .ca-text,
+  .copy-icon {
+    margin: 5px 0;
   }
 }
 </style>
